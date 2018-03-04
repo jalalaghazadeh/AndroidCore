@@ -1,4 +1,4 @@
-package com.mrjalal.androidcore;
+package com.mrjalal.androidcore.lifecycle;
 
 import android.app.Fragment;
 import android.os.PersistableBundle;
@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+
+import com.mrjalal.androidcore.R;
 
 public class ActivityAndFragmentLifecycleActivity extends AppCompatActivity {
 

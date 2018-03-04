@@ -1,4 +1,4 @@
-package com.mrjalal.androidcore;
+package com.mrjalal.androidcore.lifecycle;
 
 
 import android.content.Context;
@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.mrjalal.androidcore.R;
 
 
 /**
