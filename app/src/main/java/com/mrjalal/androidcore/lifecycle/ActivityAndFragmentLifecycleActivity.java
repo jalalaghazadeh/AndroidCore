@@ -65,7 +65,20 @@ public class ActivityAndFragmentLifecycleActivity extends AppCompatActivity {
 
     /**
      * step1
-     * statusbar color is set but activity and fragment are not visible yet
+     * status_bar color is set
+     *
+     * In the onCreate() method, you perform basic application startup logic that should happen only
+     * once for the entire life of the activity.
+     * For example, your implementation of onCreate() might
+     *** bind data to lists,
+     *** initialize background threads, and
+     *** instantiate some class-scope variables.
+     *
+     * This is where most initialization should go:
+     *** calling setContentView(int) to inflate the activity's UI,
+     *** using findViewById(int) to programmatically interact with widgets in the UI,
+     *** calling managedQuery(android.net.Uri, String[], String, String[], String) to retrieve cursors for data being displayed, etc.
+     *
      * @param savedInstanceState
      */
     @Override
@@ -95,6 +108,9 @@ public class ActivityAndFragmentLifecycleActivity extends AppCompatActivity {
     /**
      * step 3
      * activity and fragment are still not visible yet
+     *
+     * this method is where the app initializes the code that maintains the UI.
+     * It might also register a BroadcastReceiver that monitors changes that are reflected in the UI.
      */
     @Override
     protected void onStart() {
@@ -129,6 +145,16 @@ public class ActivityAndFragmentLifecycleActivity extends AppCompatActivity {
 
     /**
      * step 14
+     *
+     * This is the state in which the app interacts with the user.
+     * The app stays in this state until something happens to take focus away from the app.
+     * Such an event might be, for instance, receiving a phone call, the user’s navigating
+     * to another activity, or the device screen’s turning off.
+     *
+     * If the activity returns to the Resumed state from the Paused state, the system once
+     * again calls onResume() method. For this reason, you should implement onResume()
+     * to initialize components that you release during onPause().
+     * For example, you may initialize the camera
      */
     @Override
     protected void onPostResume() {

@@ -17,7 +17,16 @@ public class D_Activity extends AppCompatActivity {
         findViewById(R.id.textView).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), D_Activity.class);
+                // checking single-top demo
+//                Intent intent = new Intent(getApplicationContext(), D_Activity.class);
+                // checking single-task demo
+//                Intent intent = new Intent(getApplicationContext(), C_Activity.class);
+                // checking single-instance demo
+//                Intent intent = new Intent(getApplicationContext(), E_Activity.class);
+                // checking standard demo
+                Intent intent = new Intent(getApplicationContext(), B_Activity.class);
+
+
                 startActivity(intent);
             }
         });

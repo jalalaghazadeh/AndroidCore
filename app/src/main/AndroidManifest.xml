@@ -10,27 +10,50 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".lifecycle.ActivityAndFragmentLifecycleActivity">
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.MAIN" />-->
 
-            <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity android:name=".activity_lunch_mode.LunchModeActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".activity_lunch_mode.A_Activity" />
+        <activity android:name=".activity_lunch_mode.B_Activity" />
+        <activity
+            android:name=".activity_lunch_mode.C_Activity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity_lunch_mode.D_Activity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity_lunch_mode.E_Activity"
+            android:launchMode="singleInstance" />
+        <activity android:name=".activity_lunch_mode.F_Activity" />
+        <activity android:name=".service_intentservice.ServiceVsIntentServiceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity_lunch_mode.A_Activity" />
-        <activity android:name=".activity_lunch_mode.B_Activity" />
-        <activity android:name=".activity_lunch_mode.C_Activity" />
-        <activity
-            android:name=".activity_lunch_mode.D_Activity"
-            android:launchMode="singleTop" />
-        <activity android:name=".activity_lunch_mode.E_Activity" />
-        <activity android:name=".activity_lunch_mode.F_Activity"/>
+
+        <service
+            android:name=".service_intentservice.MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service_intentservice.MyIntentService"
+            android:exported="false"></service>
     </application>
 
 </manifest>
