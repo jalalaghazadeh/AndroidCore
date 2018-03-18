@@ -4,24 +4,27 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.nfc.Tag;
 import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.mrjalal.androidcore.R;
 
 public class ServiceVsIntentServiceActivity extends AppCompatActivity {
+    private final String TAG = ServiceVsIntentServiceActivity.class.getSimpleName();
 
     private ServiceConnection serviceConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-
+            Log.i(TAG, "onServiceConnected(ComponentName componentName, IBinder iBinder)");
         }
 
         @Override
         public void onServiceDisconnected(ComponentName componentName) {
-
+            Log.i(TAG, "onServiceDisconnected(ComponentName componentName)");
         }
     };
 
@@ -48,11 +51,11 @@ public class ServiceVsIntentServiceActivity extends AppCompatActivity {
 
     private void startService(){
         bindService(serviceIntent, serviceConnection, Context.BIND_AUTO_CREATE);
-        startService(serviceIntent);
+//        startService(serviceIntent);
     }
 
     private void stopService(){
-        stopService(serviceIntent);
+//        stopService(serviceIntent);
         unbindService(serviceConnection);
     }
 }
