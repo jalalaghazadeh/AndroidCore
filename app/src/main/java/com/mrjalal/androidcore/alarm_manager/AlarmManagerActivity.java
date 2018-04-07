@@ -20,7 +20,6 @@ public class AlarmManagerActivity extends AppCompatActivity {
 
         setupAlarmManager();
         NotificationManager nMgr = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-
     }
 
     private void setupAlarmManager() {
